@@ -153,9 +153,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infra\BlogContext.cs" />
-    <Compile Include="Migrations\201802241810065_InitialCreate.cs" />
-    <Compile Include="Migrations\201802241810065_InitialCreate.Designer.cs">
-      <DependentUpon>201802241810065_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201802281425597_Inicial-Ignorechanges.cs" />
+    <Compile Include="Migrations\201802281425597_Inicial-Ignorechanges.Designer.cs">
+      <DependentUpon>201802281425597_Inicial-Ignorechanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281443547_addInfoPublicacao.cs" />
+    <Compile Include="Migrations\201802281443547_addInfoPublicacao.Designer.cs">
+      <DependentUpon>201802281443547_addInfoPublicacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Post.cs" />
@@ -215,8 +219,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802241810065_InitialCreate.resx">
-      <DependentUpon>201802241810065_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802281425597_Inicial-Ignorechanges.resx">
+      <DependentUpon>201802281425597_Inicial-Ignorechanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281443547_addInfoPublicacao.resx">
+      <DependentUpon>201802281443547_addInfoPublicacao.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

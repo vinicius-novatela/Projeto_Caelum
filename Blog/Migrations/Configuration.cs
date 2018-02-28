@@ -9,8 +9,7 @@ namespace Blog.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            ContextKey = "Blog.Infra.BlogContext";
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Blog.Infra.BlogContext context)

@@ -9,9 +9,9 @@
     <form @*action="/Home/adicionaPost"*@ method="post">
         <div class="row">
 
-            <div class="col-md-3">
-               @*<input class="form-control" name="Id" value="@Model.Id" />*@
-            </div>
+            @*<div class="col-md-3">
+               <input class="form-control" name="Id" value="@Model.Id" />
+            </div>*@
 
             <div class="col-md-3">                
                     <label>título</label>  <input class="form-control" name="Titulo" value="@Model.Titulo" />               
@@ -23,10 +23,25 @@
                     <label>Categoria</label>  <input class="form-control" name="Categoria" value="@Model.Categoria" />               
             </div>
         </div>
-        <div class="row" style="margin-top:40px">
+        <div class="row" style="margin-top:20px;">
             <div class="col-md-3">
+                <label>@*Data da publicação*@ </label> <input type="text" name="DataPublicacao" value="@Model.DataPublicacao" hidden />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3" style="margin-top:20px;"><label>Publicar</label></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label>Não</label><input  type="radio" name="Publicado" value="0" checked="@(Model.Publicado) == 0"  />
+                <label>Sim</label><input  type="radio" name="Publicado" value="1" checked="@(Model.Publicado) == 1" />
+            </div>
+             <div class="col-md-3">
                 <button  class="form-control" type="submit">enviar</button>
             </div>
+        </div>
+        <div class="row" style="margin-top:40px">
+          
         </div>
     </form>
 </div>
