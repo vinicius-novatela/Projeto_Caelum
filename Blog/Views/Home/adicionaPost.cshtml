@@ -1,0 +1,32 @@
+﻿@model Blog.Models.Post
+@{
+    ViewBag.Title = "adicionaPost";
+}
+
+<h2>adicionaPost</h2>
+
+<div class="col-md-12">
+    <form @*action="/Home/adicionaPost"*@ method="post">
+        <div class="row">
+
+            <div class="col-md-3">
+               @*<input class="form-control" name="Id" value="@Model.Id" />*@
+            </div>
+
+            <div class="col-md-3">                
+                    <label>título</label>  <input class="form-control" name="Titulo" value="@Model.Titulo" />               
+            </div>
+            <div class="col-md-3">               
+                    <label>Resumo</label>  <input class="form-control" name="Resumo" value="@Model.Resumo" />               
+            </div>
+            <div class="col-md-3">               
+                    <label>Categoria</label>  <input class="form-control" name="Categoria" value="@Model.Categoria" />               
+            </div>
+        </div>
+        <div class="row" style="margin-top:40px">
+            <div class="col-md-3">
+                <button  class="form-control" type="submit">enviar</button>
+            </div>
+        </div>
+    </form>
+</div>
