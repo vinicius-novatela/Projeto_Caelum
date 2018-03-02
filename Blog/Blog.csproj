@@ -251,6 +251,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\adicionaPost.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Post.cshtml" />
+    <Content Include="Views\Shared\_Cabecalho.cshtml" />
+    <Content Include="Views\Shared\_Rodape.cshtml" />
+    <Content Include="Views\Shared\_lateral.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

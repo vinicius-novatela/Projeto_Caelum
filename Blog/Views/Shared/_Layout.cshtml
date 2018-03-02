@@ -1,5 +1,49 @@
 ﻿<!DOCTYPE html>
 <html>
+<head> 
+    <meta  name="viewport" content="width=device-width"; charset="utf-8" />
+    <title>Resenha Cultural</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    
+
+    @Html.Partial("_Cabecalho")
+    
+    <div class="container">
+        <main>
+            @RenderBody()
+        </main>
+
+        @Html.Partial("_Lateral")
+    </div>
+    @Html.Partial("_Rodape")
+    @RenderSection("Scripts", false)@*renderiza scripts de formularios usando referencia scripts*@
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
@@ -40,4 +84,4 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
-</html>
+</html>*@

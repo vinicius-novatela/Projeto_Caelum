@@ -12,7 +12,6 @@ $(document).ready(function ($) {
         },
     });
 
-
     $('#post').validate({
         rules: {
             Titulo: {

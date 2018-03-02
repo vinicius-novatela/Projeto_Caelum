@@ -70,6 +70,18 @@ namespace Blog.Controllers
             }           
         }
 
+        public  ActionResult Busca(string termo)//busca por titulo ou resumo
+        {
+            BlogContext db = new BlogContext();
+            var model = db.Post.Where(p => (p.Publicado) && (p.Titulo.Contains(termo) || p.Resumo.Contains(termo)))
+                .Select(p => p)
+                .ToList();
+            return View("Index",model);
+
+                
+                
+        }
+
         [HttpPost]
         public ActionResult CategoriaAutocomplete(string term)
         {

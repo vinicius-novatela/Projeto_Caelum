@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "_Lateral";
+}
+
+<aside>
+    <div>
+        <h3>buscar</h3>
+
+        @using (Html.BeginForm("Busca", "Home", FormMethod.Get, new { @class = "inline-form" }))
+        {
+            @*<form action="/Home/Busca" method="get">*@
+            @*<input type="text" name="termo" value="" placeholder="Buscar por" />*@
+
+            @Html.TextBox("termo", null, new { @class = "inline-form" })
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="submit"> ok </button>
+            </span>
+            @*</form>*@
+        }
+      
+    </div>
+
+    <div>
+        <h3>Categorias</h3>
+        
+    </div>
+
+    <div>
+        <h3>Autores</h3>
+       
+    </div>
+    
+</aside>
+
+
+    @*<div>
+       <h3>Buscar </h3>
+    </div>
+    <div id="categorias">
+        <h3>Categorias</h3>
+    </div>
+    <div id="Autores">
+        <h3>Autores</h3>
+    </div>*@
+
+
+
+
+
