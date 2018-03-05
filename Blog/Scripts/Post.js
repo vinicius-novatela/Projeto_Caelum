@@ -1,6 +1,7 @@
 ﻿
 $(document).ready(function ($) {
 
+
     $('input[name="Categoria"]').ajaxComplete({ //auto complete campo input categoria
         source: function (request, response) {
             $.post(

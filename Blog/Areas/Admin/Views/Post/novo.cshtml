@@ -1,0 +1,45 @@
+﻿@model Blog.Models.Post
+
+<h2>Novo Post</h2>
+
+<div class="col-md-12">
+
+    <form id="post" method="post">
+                <div class="row">
+                    <label>título</label>  <input class="form-control" name="Titulo" value="@Model.Titulo" />
+                    @Html.ValidationMessage("titulo")
+                </div>
+                <div class="row">
+                    <label>Resumo</label>  <input class="form-control" name="Resumo" value="@Model.Resumo" />
+                    @Html.ValidationMessage("resumo")
+                </div>
+                <div class="row">
+                    <label>Categoria</label>  <input class="form-control" name="Categoria" value="@Model.Categoria" />
+                    @Html.ValidationMessage("Categoria")
+                </div>
+
+                <div class="row" style="margin-top:20px;">
+                    <label></label> <input type="hidden" name="DataPublicacao" value="@Model.DataPublicacao" hidden />
+                </div>
+
+                <div class="row">
+                    <input type="hidden" name="Publicado" value="@Model.Publicado.ToString()" />
+                </div>
+
+                <div class="row" style="margin-top:40px">
+                    <div class="col-md-3">
+                        <button class="form-control" type="submit">enviar</button>
+                    </div>
+                </div>
+
+
+
+                @*@Html.EditorFor(p=>p)*@
+              
+            </form>
+        </div>
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/Post")
+}

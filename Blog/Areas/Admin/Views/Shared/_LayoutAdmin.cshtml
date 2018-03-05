@@ -1,0 +1,23 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" ; charset="utf-8" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
+    <title>_MenuAdmin</title>
+</head>
+<body>
+    @Html.Partial("_Cabecalho")
+
+    <div class="container">
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+ 
+    @RenderSection("Scripts", false)@*renderiza scripts de formularios usando referencia scripts*@
+</body>
+</html>
