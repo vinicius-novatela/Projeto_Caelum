@@ -20,6 +20,17 @@ namespace Blog.Controllers
             BlogContext db = new BlogContext();
             var lista = db.Post.Where(post => post.Categoria.Contains(categoria)).ToList(); 
             return View("index",lista);
-        }     
+        }
+
+
+        public ActionResult Busca(string termo)//busca por titulo ou resumo
+        {
+            BlogContext db = new BlogContext();
+            var model = db.Post.Where(p => (p.Publicado) && (p.Titulo.Contains(termo) || p.Resumo.Contains(termo)))
+                .Select(p => p)
+                .ToList();
+            return View("Index", model);
+        }
+
     }
 }
