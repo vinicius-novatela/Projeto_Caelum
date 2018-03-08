@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
+﻿
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,5 @@ namespace Blog.Models
             var userStore = new UserStore<Usuario>(new BlogContext());
             return new UsuarioManager(userStore);
         }
-
     }
 }

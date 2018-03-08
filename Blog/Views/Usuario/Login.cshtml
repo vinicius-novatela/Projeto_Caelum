@@ -1,0 +1,28 @@
+﻿
+@model Blog.Models.LoginViewModel
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <title>Resenha-cultural-Login</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/estilo.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <main id="login-form">
+            <h2>Resenha-Cultural-Login</h2>
+            @Html.ValidationSummary()
+            <form>
+                <label>Usuário<input class="form-control" type="text" name="loginName" value="" /></label>
+                <label>Password<input class="form-control" type="text" name="Password" value="" /></label>
+                <input class="btn-info" type="submit" value="Login" />
+            </form>
+        </main>
+    </div>
+</body>
+</html>

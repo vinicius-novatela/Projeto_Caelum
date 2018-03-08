@@ -9,7 +9,7 @@ namespace Blog.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(Blog.Infra.BlogContext context)
