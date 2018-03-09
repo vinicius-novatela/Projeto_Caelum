@@ -123,3 +123,5 @@ C:\projetos\Projeto_Caelum\Blog\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\projetos\Projeto_Caelum\Blog\bin\Microsoft.Owin.Security.xml
 C:\projetos\Projeto_Caelum\Blog\bin\Microsoft.Owin.Security.Cookies.xml
 C:\projetos\Projeto_Caelum\Blog\bin\Microsoft.Owin.Security.OAuth.xml
+C:\projetos\Projeto_Caelum\Blog\obj\Debug\Blog.Migrations.Identity.resources
+C:\projetos\Projeto_Caelum\Blog\obj\Debug\Blog.csproj.GenerateResource.Cache

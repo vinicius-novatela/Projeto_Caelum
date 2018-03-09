@@ -53,6 +53,7 @@ namespace Blog.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Login(LoginViewModel model)
         {
@@ -60,12 +61,16 @@ namespace Blog.Controllers
             {
                 UsuarioManager manager = HttpContext.GetOwinContext().GetUserManager<UsuarioManager>(); //instancia classe UsuarioManager
                 Usuario usuario = manager.Find(model.LoginName, model.Password);//busca no banco
-                if (usuario != null)
-                {
+                if (usuario != null)// usuario encontrado 
+                {   //metodo createIdentity recebe parametros(instancia Usuario, tipo de autenticaçao por cookie de sessao)
                     ClaimsIdentity identity = manager.CreateIdentity(usuario, DefaultAuthenticationTypes.ApplicationCookie);
+                    //metodo SignIn cria uma sessao para o usuario
                     HttpContext.GetOwinContext().Authentication.SignIn(new Microsoft.Owin.Security.AuthenticationProperties() { }, identity);
+
+                    return View("Index", "Admin");//usuario nao encontrado
                 }
-                return View("Index", "Admin");
+                //
+                return View(model);
             }
             else
                 return View(model);

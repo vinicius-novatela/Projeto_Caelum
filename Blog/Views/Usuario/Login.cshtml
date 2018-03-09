@@ -17,11 +17,12 @@
         <main id="login-form">
             <h2>Resenha-Cultural-Login</h2>
             @Html.ValidationSummary()
-            <form>
+            @using (Html.BeginForm())
+            {            
                 <label>Usuário<input class="form-control" type="text" name="loginName" value="" /></label>
                 <label>Password<input class="form-control" type="text" name="Password" value="" /></label>
                 <input class="btn-info" type="submit" value="Login" />
-            </form>
+            }
         </main>
     </div>
 </body>

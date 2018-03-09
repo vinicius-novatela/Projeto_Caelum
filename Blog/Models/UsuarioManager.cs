@@ -17,7 +17,7 @@ namespace Blog.Models
               
         }
 
-        //metodo para criar  instancia da classe  UsuarioManager
+       // metodo para criar instancia da classe  UsuarioManager
         public static UsuarioManager create()
         {
             var userStore = new UserStore<Usuario>(new BlogContext());

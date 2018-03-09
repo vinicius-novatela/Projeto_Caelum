@@ -8,20 +8,17 @@ using System.Web;
 
 namespace Blog.Infra
 {
-    public class BlogContext : IdentityDbContext<Usuario>
+    public class BlogContext : IdentityDbContext<Usuario>// 
     {
         public BlogContext() : base("name=blog") { }
         public DbSet<Post> Post { get; set; }
-        public DbSet<Usuario> Usuario { get; set; }
+        //public DbSet<Usuario> Usuario { get; set; }
+        //public DbSet<UsuarioManager> UsuarioManager { get; set; }
 
-
-
-
-
-        public static BlogContext Create()
-        {
-            return new BlogContext();
-        }
+        //public static BlogContext Create()
+        //{
+        //    return new BlogContext();
+        //}
 
     }
 }
