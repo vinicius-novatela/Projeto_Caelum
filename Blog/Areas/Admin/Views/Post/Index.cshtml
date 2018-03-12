@@ -1,0 +1,95 @@
+﻿                                                                                                                                                                                                                              
+@model IEnumerable<Blog.Models.Post>
+@{
+    Layout ="~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<td> <a href="@Url.Action("novo","Post")">novo</a> </td>
+    <table class="table table-responsive table-bordered table-striped">
+        <thead>
+            <tr>
+                <th> Id</th>
+                <th> Titulo</th>
+                <th> Resumo</th>
+                <th> Categoria</th>
+                <th> Publicado? </th>
+                <th> Ações </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+
+                <td>@item.Id</td>
+                <td>@item.Titulo</td>
+                <td>@item.Resumo</td>
+                <td>@item.Categoria</td>
+                <td>@item.Publicado</td>
+                <td>
+                    @if (item.Publicado)
+                    {
+                        @Html.Raw(string.Format("{0:dd/MM/yyyy}", item.DataPublicacao))
+                    }
+                    else
+                    {
+                        @Html.Raw("Nao")
+                    }
+                </td>
+                
+                <td><a href="@Url.Action("Edit","Post",new { id = item.Id })">Update</a> </td>
+
+                @*<td> <a href="@Url.Action("RemovePost","Post",new { id = item.Id })">Remover</a> </td>*@
+                <td> <a href="@Url.Action("PublicaPost","Post",new { id = item.Id })">Publicar</a>  </td>
+                <td>@Html.ActionLink("remove", "RemovePost", new { id = item.Id }, new { @class = "postsubmit", id = item.Id })</td>@*metodo assincrono*@
+
+                 
+                </tr>
+
+
+            }
+           
+
+        </tbody>
+
+
+
+    </table>
+
+
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+    $(".postSubmit").click(function (event) {@*metodo assincrono para remover posts*@
+        event.preventDefault();
+        self = ($this);
+        alert("clicou, mandando requisitos assincronos");
+        link = '/Home/RemovePost/' + self.attr("id");
+        alert("Chamado url " + link);
+        $.get(link, function (data) {
+            alert("Removendo tr");
+            self.closed("tr").remove();
+        });
+    });
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+

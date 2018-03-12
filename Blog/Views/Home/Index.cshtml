@@ -1,20 +1,14 @@
-﻿@model IEnumerable<Blog.Models.Post>
+﻿@model IList<Blog.Models.Post>
 @{
     ViewBag.Title = "Index";
 }
 
-<a href="@Url.Action("adicionaPost","Home")">Adiciona_Post</a>
+@*<a href="@Url.Action("adicionaPost","Home")">Adiciona_Post</a>*@
 @foreach (var item in Model)
 {
-    <article>
-     
+    <article>   
             <h1>@item.Titulo</h1>
-            <P> @item.Resumo </P>
-       
-      
-        <a href="@Url.Action("adicionaPost","Home",new { id = item.Id })">Update</a>
-        <a href="@Url.Action("RemovePost","Home",new { id = item.Id })">Remover</a> 
-        <a href="@Url.Action("PublicaPost","Home",new { id = item.Id })">Publicar</a>
+            <P> @item.Resumo </P>        
     </article>
 
 }
@@ -26,46 +20,5 @@
 
 
 
-
-
-@*<td> <a href="@Url.Action("adicionaPost","Home")">Adiciona_Post</a> </td>
-
-<table class="table table-responsive table-bordered table-striped">
-    <thead>
-        <tr>
-            <th> Id</th>
-            <th> Titulo</th>
-            <th> Resumo</th>
-            <th> Categoria</th>
-            <th> Publicado? </th>
-            <th> Ações </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.Titulo</td>
-                <td>@item.Resumo</td>
-                <td>@item.Categoria</td>
-                <td>@item.Publicado</td>
-                <td>
-                     @if (item.Publicado)
-                     {
-                       @Html.Raw(string.Format("{0:dd/MM/yyyy}", item.DataPublicacao))
-                     }
-                     else
-                     {
-                         @Html.Raw("Nao")
-                     }
-                </td>
-                <td> <a href="@Url.Action("adicionaPost","Home",new { id = item.Id })">Update</a> </td>
-                <td> <a href="@Url.Action("RemovePost","Home",new { id = item.Id })">Remover</a> </td>  
-                <td> <a href="@Url.Action("PublicaPost","Home",new { id = item.Id })">Publicar</a>  </td>
-            </tr>
-        }
-    </tbody>
-</table>*@
 
 

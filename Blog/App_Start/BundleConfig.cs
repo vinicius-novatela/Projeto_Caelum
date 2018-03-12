@@ -30,6 +30,7 @@ namespace Blog
             bundles.Add(new ScriptBundle("~/bundles/Post").Include(
                          "~/Scripts/jquery-3.3.1.js",
                          "~/Scripts/jquery.validate.js",
+                         "~/Scripts/jquery.validate.unobtrusive.js",
                          "~/Scripts/jquery-ui-1.12.1.js",
                           "~/Scripts/Post.js"));
 

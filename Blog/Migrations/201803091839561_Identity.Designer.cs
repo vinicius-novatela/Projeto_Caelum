@@ -7,13 +7,13 @@ namespace Blog.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InicialIgnorechanges : IMigrationMetadata
+    public sealed partial class Identity : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InicialIgnorechanges));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Identity));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802281425597_Inicial-Ignorechanges"; }
+            get { return "201803091839561_Identity"; }
         }
         
         string IMigrationMetadata.Source
