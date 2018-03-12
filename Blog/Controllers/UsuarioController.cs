@@ -67,7 +67,11 @@ namespace Blog.Controllers
                     //metodo SignIn cria uma sessao para o usuario
                     HttpContext.GetOwinContext().Authentication.SignIn(new Microsoft.Owin.Security.AuthenticationProperties() { }, identity);
 
+<<<<<<< HEAD
                     return RedirectToAction("Index","Post",new {area="Admin"});//usuario nao encontrado
+=======
+                    return View("Index", "Admin");//usuario nao encontrado
+>>>>>>> dbc8f2a52c79f0bfbeb99ab83b9a33b9899aaf4d
                 }
                 //
                 return View(model);

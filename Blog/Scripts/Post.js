@@ -2,9 +2,14 @@
 $(document).ready(function ($) {
 
 
+<<<<<<< HEAD
     
         $('input[name="Categoria"]').autocomplete({ //auto complete campo input categoria
             source: function (request, response) {
+=======
+    $('input[name="Categoria"]').ajaxComplete({ //auto complete campo input categoria
+        source: function (request, response) {
+>>>>>>> dbc8f2a52c79f0bfbeb99ab83b9a33b9899aaf4d
             $.post(
                 "@Url.Action('CategoriaAutoComplete')",
                 { term: request.term },

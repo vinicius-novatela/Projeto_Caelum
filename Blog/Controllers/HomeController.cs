@@ -10,7 +10,11 @@ namespace Blog.Controllers
 {
     public class HomeController : Controller
     {   
+<<<<<<< HEAD
         public ActionResult Index()//substituir  BlogContext pela classe PostDal
+=======
+        public ActionResult Index()
+>>>>>>> dbc8f2a52c79f0bfbeb99ab83b9a33b9899aaf4d
         {
             BlogContext db = new BlogContext();
             return View(db.Post.ToList());

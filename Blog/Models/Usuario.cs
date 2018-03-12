@@ -16,6 +16,7 @@ namespace Blog.Models
 
         public DateTime UltimoLogin { get; set; }
 
+<<<<<<< HEAD
         //[Required]
         //[Display(Name = "Usuario")]
         //public string loginName { get; set; }
@@ -24,6 +25,16 @@ namespace Blog.Models
         //[Display(Name = "Senha")]
         //[DataType(DataType.Password)]
         //public string Password { get; set; }
+=======
+        [Required]
+        [Display(Name = "Usuario")]
+        public string loginName { get; set; }
+
+        [Required]
+        [Display(Name = "Senha")]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+>>>>>>> dbc8f2a52c79f0bfbeb99ab83b9a33b9899aaf4d
 
         public virtual ICollection<Post> Posts { get; set; }
 

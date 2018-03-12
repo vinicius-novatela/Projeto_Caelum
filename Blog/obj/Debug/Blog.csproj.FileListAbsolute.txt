@@ -125,6 +125,7 @@ C:\projetos\Projeto_Caelum\Blog\bin\Microsoft.Owin.Security.Cookies.xml
 C:\projetos\Projeto_Caelum\Blog\bin\Microsoft.Owin.Security.OAuth.xml
 C:\projetos\Projeto_Caelum\Blog\obj\Debug\Blog.Migrations.Identity.resources
 C:\projetos\Projeto_Caelum\Blog\obj\Debug\Blog.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\RG Soluções\Desktop\Projeto_Caelum-master\Projeto_Caelum-master\Blog\bin\ApplicationInsights.config
 C:\Users\RG Soluções\Desktop\Projeto_Caelum-master\Projeto_Caelum-master\Blog\bin\Blog.dll.config
 C:\Users\RG Soluções\Desktop\Projeto_Caelum-master\Projeto_Caelum-master\Blog\bin\Blog.dll
@@ -269,3 +270,5 @@ C:\Users\RG Soluções\Documents\GitHub\Projeto_Caelum\Blog\obj\Debug\Blog.cspro
 C:\Users\RG Soluções\Documents\GitHub\Projeto_Caelum\Blog\obj\Debug\Blog.csproj.CoreCompileInputs.cache
 C:\Users\RG Soluções\Documents\GitHub\Projeto_Caelum\Blog\obj\Debug\Blog.dll
 C:\Users\RG Soluções\Documents\GitHub\Projeto_Caelum\Blog\obj\Debug\Blog.pdb
+=======
+>>>>>>> dbc8f2a52c79f0bfbeb99ab83b9a33b9899aaf4d

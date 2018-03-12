@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿                                                                                                                                                                                                                              
+=======
+﻿
+>>>>>>> dbc8f2a52c79f0bfbeb99ab83b9a33b9899aaf4d
 @model IEnumerable<Blog.Models.Post>
 @{
     Layout ="~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -18,6 +22,7 @@
         <tbody>
             @foreach (var item in Model)
             {
+<<<<<<< HEAD
             <tr>
 
                 <td>@item.Id</td>
@@ -93,3 +98,30 @@
 
 
 
+=======
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Titulo</td>
+                    <td>@item.Resumo</td>
+                    <td>@item.Categoria</td>
+                    <td>@item.Publicado</td>
+                    <td>
+                         @if (item.Publicado)
+                         {
+                           @Html.Raw(string.Format("{0:dd/MM/yyyy}", item.DataPublicacao))
+                         }
+                         else
+                         {
+                             @Html.Raw("Nao")
+                         }
+                    </td>
+                    <td> <a href="@Url.Action("Edit","Post",new { id = item.Id })">Update</a> </td>
+                    <td> <a href="@Url.Action("RemovePost","Post",new { id = item.Id })">Remover</a> </td>
+                    <td> <a href="@Url.Action("PublicaPost","Post",new { id = item.Id })">Publicar</a>  </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+>>>>>>> dbc8f2a52c79f0bfbeb99ab83b9a33b9899aaf4d
